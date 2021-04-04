@@ -48,8 +48,8 @@ public abstract class NetworkFlow {
             String u = (from == s) ? "s" : ((from == t) ? "t" : String.valueOf(from));
             String v = (to == s) ? "s" : ((to == t) ? "t" : String.valueOf(to));
             return String.format(
-                    "Edge %s -> %s | flow = %d | capacity = %d | is residual: %s",
-                    u, v, flow, capacity, isResidual());
+                    " %s -> %s | flow : %d | capacity : %d",
+                    u, v, flow, capacity);
         }
     }
 
