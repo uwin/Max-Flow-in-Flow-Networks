@@ -48,8 +48,8 @@ public abstract class NetworkFlow {
             String u = (from == s) ? "s" : ((from == t) ? "t" : String.valueOf(from));
             String v = (to == s) ? "s" : ((to == t) ? "t" : String.valueOf(to));
             return String.format(
-                    " %s -> %s | flow : %d | capacity : %d",
-                    u, v, flow, capacity);
+                    "Edge %s -> %s | flow = %d | capacity = %d | is residual: %s",
+                    u, v, flow, capacity, isResidual());
         }
     }
 
@@ -278,9 +278,7 @@ public abstract class NetworkFlow {
         ArrayList<String> benchmark = loadBenchmark("ladder_1.txt");
         int n = Integer.parseInt(benchmark.get(0));
 
-        System.out.println("benchmark = " + benchmark);
         benchmark.remove(0);
-        System.out.println("benchmark = " + benchmark);
 
         int s = 0;
         int t = n - 1;
