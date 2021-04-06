@@ -187,7 +187,7 @@ public class Flow {
         start=System.currentTimeMillis();
 
         try {
-            File myObj = new File("G:\\My Drive\\iit\\lvl05\\SEM2\\Algo\\CW\\code\\src\\Some input files for testing\\"+filename+".txt");
+            File myObj = new File("Some input files for testing\\"+filename+".txt");
             Scanner myReader = new Scanner(myObj);
             String data = myReader.nextLine();
             snodes= Integer.parseInt(data.trim());
@@ -210,7 +210,7 @@ public class Flow {
         }
 
         try {
-            File myObj2 = new File("G:\\My Drive\\iit\\lvl05\\SEM2\\Algo\\CW\\code\\src\\Some input files for testing\\"+filename+".txt");
+            File myObj2 = new File("Some input files for testing\\"+filename+".txt");
             Scanner myReader2 = new Scanner(myObj2);
             count=0;
             while (myReader2.hasNextLine()) {
